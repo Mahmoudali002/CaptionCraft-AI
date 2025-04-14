@@ -1,6 +1,6 @@
 # **App Name**: CaptionCraft AI
 
-## Core Features:
+## Core Features: 
 
 - Input Configuration: Simple input fields for theme, target audience, tone, and platform (Instagram, X, LinkedIn).
 - AI Caption Generation: Generates 3-5 caption variations using Google Gemini Flash 2 API based on user input.
