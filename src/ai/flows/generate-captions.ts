@@ -16,7 +16,7 @@ const GenerateCaptionsInputSchema = z.object({
   theme: z.string().describe('The theme of the social media post.'),
   targetAudience: z.string().describe('The target audience for the post.'),
   tone: z.string().describe('The desired tone of the caption (e.g., funny, professional, persuasive).'),
-  platform: z.enum(['Instagram', 'X', 'LinkedIn']).describe('The social media platform for the caption.'),
+  platform: z.enum(['Instagram', 'X', 'LinkedIn', 'Facebook']).describe('The social media platform for the caption.'),
 });
 export type GenerateCaptionsInput = z.infer<typeof GenerateCaptionsInputSchema>;
 
@@ -38,7 +38,7 @@ const generateCaptionsPrompt = ai.definePrompt({
       theme: z.string().describe('The theme of the social media post.'),
       targetAudience: z.string().describe('The target audience for the post.'),
       tone: z.string().describe('The desired tone of the caption (e.g., funny, professional, persuasive).'),
-      platform: z.enum(['Instagram', 'X', 'LinkedIn']).describe('The social media platform for the caption.'),
+      platform: z.enum(['Instagram', 'X', 'LinkedIn', 'Facebook']).describe('The social media platform for the caption.'),
     }),
   },
   output: {
@@ -69,3 +69,4 @@ const generateCaptionsFlow = ai.defineFlow<
   const {output} = await generateCaptionsPrompt(input);
   return output!;
 });
+

@@ -11,7 +11,7 @@ import {useToast} from '@/hooks/use-toast';
 
 export function AnalyzeCaption() {
   const [caption, setCaption] = useState('');
-  const [platform, setPlatform] = useState<'Instagram' | 'X' | 'LinkedIn'>('Instagram');
+  const [platform, setPlatform] = useState<'Instagram' | 'X' | 'LinkedIn' | 'Facebook'>('Instagram');
   const [engagementMetrics, setEngagementMetrics] = useState('');
   const [theme, setTheme] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
@@ -63,7 +63,7 @@ export function AnalyzeCaption() {
         </div>
         <div>
           <Label htmlFor="platform">Platform</Label>
-          <Select onValueChange={(value) => setPlatform(value as 'Instagram' | 'X' | 'LinkedIn')}>
+          <Select onValueChange={(value) => setPlatform(value as 'Instagram' | 'X' | 'LinkedIn' | 'Facebook')}>
             <SelectTrigger id="platform">
               <SelectValue placeholder="Select a platform" />
             </SelectTrigger>
@@ -71,6 +71,7 @@ export function AnalyzeCaption() {
               <SelectItem value="Instagram">Instagram</SelectItem>
               <SelectItem value="X">X</SelectItem>
               <SelectItem value="LinkedIn">LinkedIn</SelectItem>
+              <SelectItem value="Facebook">Facebook</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -127,3 +128,4 @@ export function AnalyzeCaption() {
     </div>
   );
 }
+

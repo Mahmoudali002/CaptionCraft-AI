@@ -16,7 +16,7 @@ import {z} from 'genkit';
 const AnalyzeCaptionPerformanceInputSchema = z.object({
   caption: z.string().describe('The social media caption to analyze.'),
   platform: z
-    .enum(['Instagram', 'X', 'LinkedIn'])
+    .enum(['Instagram', 'X', 'LinkedIn', 'Facebook'])
     .describe('The platform where the caption was used.'),
   engagementMetrics: z
     .string()
@@ -54,7 +54,7 @@ const prompt = ai.definePrompt({
     schema: z.object({
       caption: z.string().describe('The social media caption to analyze.'),
       platform: z
-        .enum(['Instagram', 'X', 'LinkedIn'])
+        .enum(['Instagram', 'X', 'LinkedIn', 'Facebook'])
         .describe('The platform where the caption was used.'),
       engagementMetrics: z
         .string()
@@ -102,3 +102,4 @@ const analyzeCaptionPerformanceFlow = ai.defineFlow<
     return output!;
   }
 );
+
