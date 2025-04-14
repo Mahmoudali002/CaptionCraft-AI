@@ -1,4 +1,4 @@
-"use client";
+"use client"; 
 
 import {useState} from 'react';
 import {generateCaptions} from '@/ai/flows/generate-captions';
