@@ -1,4 +1,4 @@
-{# CaptionCraft AI
+{# CaptionCraft AI 
 
 ## Project Description
 
