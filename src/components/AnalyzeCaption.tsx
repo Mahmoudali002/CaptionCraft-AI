@@ -1,4 +1,4 @@
-"use client";
+"use client"; 
 
 import {useState} from 'react';
 import {analyzeCaptionPerformance} from '@/ai/flows/analyze-caption-performance';
